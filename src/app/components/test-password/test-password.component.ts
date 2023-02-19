@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { PasswordService } from 'src/app/services/password.service';
 
 @Component({
   selector: 'app-test-password',

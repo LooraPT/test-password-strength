@@ -8,5 +8,10 @@ import { PasswordService } from 'src/app/services/password.service';
 })
 export class PasswordComplexityComponent {
 
-  constructor(public passwordService: PasswordService) {}
+  constructor(private passwordService: PasswordService) { }
+
+  get passwordStrengthClass(): string {
+    const passwordStrength = this.passwordService.statePasswordStrength;
+    return passwordStrength ? `password__strength-${passwordStrength}` : '';
+  }
 }
